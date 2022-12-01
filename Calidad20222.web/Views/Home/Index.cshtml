@@ -1,0 +1,163 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome Poker Game</h1>
+    <form action="/home/editar" method="post">
+        <tr>
+            <h4>Carta 1</h4>
+            <th>
+                <select name="carta1">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                </select>Ingrese carta
+            </th>
+            <th>
+                <select name="select1">
+                    <option value="Corazón" selected>Corazón</option>
+                    <option value="Trébol">Trébol</option>
+                    <option value="Coco">Coco</option>
+                    <option value="Espada">Espada</option>
+                </select>Ingrese palo
+            </th>
+                
+            <h4>Carta 2</h4>
+            <th>
+                <select name="carta2">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                </select>Ingrese carta 
+            </th>
+            <th>
+                <select name="select2">
+                    <option value="Corazón" selected>Corazón</option>
+                    <option value="Trébol">Trébol</option>
+                    <option value="Coco">Coco</option>
+                    <option value="Espada">Espada</option>
+                </select>Ingrese palo </th>
+            <h4>Carta 3</h4>
+            <th>
+                <select name="carta3">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                </select>Ingrese carta
+            </th>
+            <th>
+                <select name="select3">
+                    <option value="Corazón" selected>Corazón</option>
+                    <option value="Trébol">Trébol</option>
+                    <option value="Coco">Coco</option>
+                    <option value="Espada">Espada</option>
+                </select>Ingrese palo
+            </th>
+            <h4>Carta 4</h4>
+            <th>
+                <select name="carta4">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                </select>Ingrese carta 
+            </th>
+            <th>
+                <select name="select4">
+                    <option value="Corazón" selected>Corazón</option>
+                    <option value="Trébol">Trébol</option>
+                    <option value="Coco">Coco</option>
+                    <option value="Espada">Espada</option>
+                </select>Ingrese palo
+            </th>
+            <h4>Carta 5</h4>
+            <th>
+                <select name="carta5">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                </select>Ingrese carta
+            </th>
+            <th>
+                <select name="select5">
+                    <option value="Corazón" selected>Corazón</option>
+                    <option value="Trébol">Trébol</option>
+                    <option value="Coco">Coco</option>
+                    <option value="Espada">Espada</option>
+                </select>Ingrese palo
+            </th>
+        </tr>
+        <h4></h4>
+        <button class="btn btn-primary">Ver Jugada</button>
+    </form>
+    <form action="/home/generar" method="post">
+        <button class="btn btn-primary">Generar Jugada</button>
+    </form>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Cartas</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Numero @item.Palo</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    
+    <h1>Jugada: @ViewBag.Jugada</h1>
+</div>
